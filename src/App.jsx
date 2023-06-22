@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./component/Header";
 import LandingPage from "./component/LandingPage";
 import { styles } from "./styles";
+import About from "./component/About";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
         <div className={`max-w-7xl mx-auto`}>
           <Header />
           <LandingPage />
+          <About/>
         </div>
       </div>
     </>
