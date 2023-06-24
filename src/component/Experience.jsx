@@ -33,7 +33,7 @@ const experiences = [
     title: "Senior Full stack developer",
     company_name: "Wendor",
     icon: wendor_logo,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Jan 2019 - Apr 2021",
     points: [
       "Part of the product design team.",

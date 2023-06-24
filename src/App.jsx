@@ -5,6 +5,7 @@ import LandingPage from "./component/LandingPage";
 import { styles } from "./styles";
 import About from "./component/About";
 import Experience from "./component/Experience";
+import Works from "./component/Works";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
           <LandingPage />
           <About/>
           <Experience />
+          <Works/>
         </div>
       </div>
     </>
