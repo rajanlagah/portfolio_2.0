@@ -6,6 +6,8 @@ import { styles } from "./styles";
 import About from "./component/About";
 import Experience from "./component/Experience";
 import Works from "./component/Works";
+import Contact from "./component/Contact";
+import StarsCanvas from "./component/canvas/Stars";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,9 +18,13 @@ function App() {
         <div className={`max-w-7xl mx-auto`}>
           <Header />
           <LandingPage />
-          <About/>
+          <About />
           <Experience />
-          <Works/>
+          <Works />
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas/>
+          </div>
         </div>
       </div>
     </>

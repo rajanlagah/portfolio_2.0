@@ -14,6 +14,10 @@ import swym_docs from "/projects/swym_docs.png";
 const SWYM_PROJECTS = [
   {
     name: "Hydrogen Wishlist",
+    org:{
+      name:"Swym",
+      color:"#8bc34a"
+    },
     description:
       "Shopify store with Swym wishlist app configured using rest APIs. We also deploy setup docs using codelabs",
     tags: [
@@ -35,6 +39,10 @@ const SWYM_PROJECTS = [
   },
   {
     name: "SWOT",
+    org:{
+      name:"Swym",
+      color:"#8bc34a"
+    },
     description:
       "We trained and build our chatbot that has learned from Swym help articles and can answer questions related to every feature and feature integration that swym support. Reducing inbound traffic to Customer support team and response time.",
     tags: [
@@ -57,6 +65,10 @@ const SWYM_PROJECTS = [
   },
   {
     name: "Swym docs",
+    org:{
+      name:"Swym",
+      color:"#8bc34a"
+    },
     description:
       "Solution where Swym documentation, API documentation and Changelog is posted.",
     tags: [
@@ -76,20 +88,24 @@ const SWYM_PROJECTS = [
 
 const WENDOR_PROJECTS = [
   {
-    name: "Hydrogen Wishlist",
+    name: "Dashboard",
+    org:{
+      name:"Wendor",
+      color:"#fff"
+    },
     description:
-      "Shopify store with Swym wishlist app configured using rest APIs. We also deploy setup docs using codelabs",
+      "Dashboard to manage wending machines. Get vending machine status, revenue reporting and feature integrations",
     tags: [
       {
-        name: "Next.js",
+        name: "React",
         color: "blue-text-gradient"
       },
       {
-        name: "Shopify",
+        name: "Express",
         color: "green-text-gradient"
       },
       {
-        name: "claat",
+        name: "PWA",
         color: "pink-text-gradient"
       }
     ],
@@ -97,43 +113,30 @@ const WENDOR_PROJECTS = [
     source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
   },
   {
-    name: "SWOT",
+    name: "Kiosk",
+    org:{
+      name:"Wendor",
+      color:"#fff"
+    },
     description:
-      "We trained and build our chatbot that has learned from Swym help articles and can answer questions related to every feature and feature integration that swym support. Reducing inbound traffic to Customer support team and response time.",
+      "Vending machine's Touch screen app",
     tags: [
       {
         name: "React",
         color: "blue-text-gradient"
       },
       {
-        name: "ChatGPT",
+        name: "Redux",
         color: "green-text-gradient"
       },
       {
-        name: "SwymHackathon2023",
+        name: "PWA",
         color: "pink-text-gradient"
       }
     ],
     image: SWOT,
     source_code_link:
       "https://medium.com/aimonks/how-a-company-can-make-a-chatbot-from-help-articles-997434f88aba"
-  },
-  {
-    name: "Swym docs",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "Readme",
-        color: "blue-text-gradient"
-      },
-      {
-        name: "Docs",
-        color: "green-text-gradient"
-      }
-    ],
-    image: "",
-    source_code_link: "https://github.com/"
   }
 ];
 
@@ -144,6 +147,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
+  org,
   source_code_link
 }) => {
   return (
@@ -178,10 +182,11 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5 h-[200px]">
-        <span className="border-solid border-r-2 pr-2 text-[15px]">
-            Swym
+          {org && (
+            <span className={`border-solid pr-2 text-[15px] text-[${org.color}]`}>
+            {org.name}
           </span>
-          
+          )}
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 tracking-wide text-secondary text-[14px]">{description}</p>
         </div>
@@ -224,6 +229,12 @@ const Works = () => {
 
       <div className="mt-20 flex flex-wrap gap-7">
         {SWYM_PROJECTS.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
+
+      <div className="mt-20 flex flex-wrap gap-7">
+        {WENDOR_PROJECTS.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
