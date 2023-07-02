@@ -11,7 +11,7 @@ const services = [
       icon: './web.png',
     },
     {
-      title: "React Native Developer",
+      title: "Smart Contract Developer",
       icon: './mobile.png',
     },
     {

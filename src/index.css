@@ -55,3 +55,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.slick-center{
+  opacity: 1 !important;
+}
+
+.slick-slide{
+  opacity: 0.2 ;
+}
