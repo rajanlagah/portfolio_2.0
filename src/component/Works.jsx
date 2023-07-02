@@ -10,6 +10,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 import hydrogen from "/projects/hydrogen.png";
 import SWOT from "/projects/SWOT.png";
 import swym_docs from "/projects/swym_docs.png";
+import swym_dashboard from "/projects/swym_dashboard.png";
+
+import wendor_dashboard from "/projects/wendor_dashboard.png";
+import wendor_kiosk from "/projects/wendor_kiosk.png";
 
 const SWYM_PROJECTS = [
   {
@@ -35,6 +39,30 @@ const SWYM_PROJECTS = [
       }
     ],
     image: hydrogen,
+    source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
+  },{
+    name: "Swym dashboard",
+    org:{
+      name:"Swym",
+      color:"#8bc34a"
+    },
+    description:
+      "Swym dashboard to check store revenue contribution by swym apps and integrate swym features",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "Redux",
+        color: "green-text-gradient"
+      },
+      {
+        name: "Clojure",
+        color: "pink-text-gradient"
+      }
+    ],
+    image: swym_dashboard,
     source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
   },
   {
@@ -109,8 +137,8 @@ const WENDOR_PROJECTS = [
         color: "pink-text-gradient"
       }
     ],
-    image: hydrogen,
-    source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
+    image: wendor_dashboard,
+    source_code_link: "https://admin.wendor.in/"
   },
   {
     name: "Kiosk",
@@ -134,7 +162,7 @@ const WENDOR_PROJECTS = [
         color: "pink-text-gradient"
       }
     ],
-    image: SWOT,
+    image: wendor_kiosk,
     source_code_link:
       "https://medium.com/aimonks/how-a-company-can-make-a-chatbot-from-help-articles-997434f88aba"
   }
@@ -158,7 +186,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[530px] flex flex-col justify-between"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[560px] w-full h-[500px] flex flex-col justify-between"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -211,7 +239,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Public Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Featured Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
