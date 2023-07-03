@@ -11,6 +11,7 @@ import Contact from "./component/Contact";
 import StarsCanvas from "./component/canvas/Stars";
 import Github from "./component/Github";
 import Documentation from "./component/Documentation";
+import Skills from "./component/Skills";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <br />
           <LandingPage />
           <About />
+          <Skills/>
           <Experience />
           <Works />
           <Github />
