@@ -13,12 +13,14 @@ import Github from "./component/Github";
 import Documentation from "./component/Documentation";
 
 function App() {
-
   return (
     <>
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <div className={`max-w-7xl mx-auto`}>
           <Header />
+          <br />
+          <br />
+          <br />
           <LandingPage />
           <About />
           <Experience />

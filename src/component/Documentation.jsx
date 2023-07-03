@@ -215,4 +215,4 @@ const Documentation = () => {
   );
 };
 
-export default SectionWrapper(Documentation, "");
+export default SectionWrapper(Documentation, "docs");
