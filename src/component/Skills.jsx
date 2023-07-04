@@ -112,7 +112,7 @@ const Skills = () => {
         <p className={styles.sectionSubText}>Skills</p>
         <h2 className={styles.sectionHeadText}>Technologies</h2>
       </motion.div>
-      <div className="flex h-[60vh] justify-start gap-12 items-center flex-wrap">
+      <div className="flex min-h-[60vh] justify-start gap-12 items-center flex-wrap">
         <div className="flex flex-col justify-center gap-12">
           <div className="flex justify-evenly gap-5">
             <img

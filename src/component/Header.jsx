@@ -1,25 +1,19 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { styles } from "../styles";
 
 import closeIcon from "/close.svg";
 import openIcon from "/menu.svg";
-import { useState } from "react";
+
+import { styles } from "../styles";
 
 const Header = () => {
   const [isSidebarOpen, setisSidebarOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
-      <div className={`flex items-center fixed w-[70%] z-10`}>
-        <div className="flex w-full gap-2 items-center">
-          <img width="150px" src="/r-logo.png" />
-          {/* <h1 className="text-3xl font-light">Portfolio</h1> */}
-          {/* <div>
-        <h1 className="text-2xl font-light">Rajan</h1>
-        <span className="text-3xl"> Lagah</span>
-      </div> */}
-        </div>
-        <nav className="hidden md:flex text-xl justify-end items-end gap-6">
+    <div className={`${styles.paddingX} justify-between max-w-7xl mx-auto relative z-[999]`}>
+      <div className={`flex p-1 items-center justify-between max-w-7xl w-[90%] fixed z-10 pr-12`}>
+          <img className="bg-primary" width="60px" src="/r-logo.png" />
+        <nav className="hidden md:flex text-xl justify-end items-end  gap-6">
           <a href="#about"> About </a>
           <a href="#work"> Work </a>
           <a href="#projects"> Projects </a>
