@@ -46,7 +46,7 @@ const services = [
   },
   {
     title: "Jenkins",
-    color: "#61DBFBcc",
+    color: "#D33834",
     badgeColor: "#61DBFB",
     year: 3
   },
@@ -58,21 +58,21 @@ const services = [
   },
   {
     title: "MongoDB",
-    color: "#0064a5",
+    color: "#4DB33D",
     badgeColor: "#00000099",
     year: 2
   },
   {
     title: "Cypress",
-    color: "#61DBFBcc",
+    color: "#0f0",
     badgeColor: "#61DBFB",
     year: 2
   },
   {
     title: "Docker",
-    color: "#61DBFBcc",
+    color: "#0db7ed",
     badgeColor: "#61DBFB",
-    year: 1
+    year: 1.5
   }
 ];
 
