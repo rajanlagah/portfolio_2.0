@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, containerGrow } from "../utils/motion";
 
 const max_year = 4;
 
@@ -77,7 +77,7 @@ const services = [
 ];
 
 const SkillBar = ({ index, title, color, year, badgeColor }) => (
-  <div className="mt-2 xs:w-[250px] w-full">
+  <motion.div variants={containerGrow(index*0.5)} className="mt-2 xs:w-[250px] w-full">
     <div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -102,7 +102,7 @@ const SkillBar = ({ index, title, color, year, badgeColor }) => (
         <p className="text-white px-5 absolute right-0 top-1">{year} years</p>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Skills = () => {
@@ -114,44 +114,44 @@ const Skills = () => {
       </motion.div>
       <div className="flex h-[60vh] justify-start gap-12 items-center flex-wrap">
         <div className="flex flex-col justify-center gap-12">
-          <div className="flex justify-evenly gap-10">
+          <div className="flex justify-evenly gap-5">
             <img
-              width={"120px"}
-              height={"120px"}
+              width={"80px"}
+              height={"80px"}
               src="/public/skills/paint-brush.svg"
             />
             <div>
-              <h2 className="text-3xl text-[#ccc] font-bold"> Design + Development</h2>
-              <p className="mt-3 w-96 tracking-wider">
-                Clean, moder 3D web designs - optimized for performance.
+              <h2 className="text-2xl text-[#ccc] font-bold"> Design + Development</h2>
+              <p className="mt-3 w-96 tracking-wider text-sm">
+                Clean, modern 3D web designs - optimized for performance
               </p>
             </div>
           </div>
 
-          <div className="flex justify-evenly gap-10">
+          <div className="flex justify-evenly gap-5">
             <img
-              width={"120px"}
-              height={"120px"}
+              width={"80px"}
+              height={"80px"}
               src="/public/skills/code.svg"
             />
             <div>
-              <h2 className="text-3xl text-[#ccc] font-bold">Architecture</h2>
-              <p className="mt-3 w-96 tracking-wider">
+              <h2 className="text-2xl text-[#ccc] font-bold">Architecture</h2>
+              <p className="mt-3 w-96 tracking-wider text-sm">
                 FullStack Developer with passion of creating and solving system
                 architecture
               </p>
             </div>
           </div>
 
-          <div className="flex justify-evenly gap-10">
+          <div className="flex justify-evenly gap-5">
             <img
-              width={"120px"}
-              height={"120px"}
+              width={"80px"}
+              height={"80px"}
               src="/public/skills/jira.svg"
             />
             <div>
-              <h2 className="text-3xl text-[#ccc] font-bold">Management</h2>
-              <p className="mt-3 w-96 tracking-wider">
+              <h2 className="text-2xl text-[#ccc] font-bold">Management</h2>
+              <p className="mt-3 w-96 tracking-wider text-sm">
                 Responsibility of delivering final product and keeping team
                 up-to-date{" "}
               </p>
