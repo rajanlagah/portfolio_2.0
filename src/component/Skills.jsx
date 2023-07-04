@@ -82,7 +82,7 @@ const SkillBar = ({ index, title, color, year, badgeColor }) => (
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
-      <div className="relative align-middle rounded-[10px] sm:w-[500px] md:w-[600px] h-[30px] flex justify-between">
+      <div className="relative align-middle rounded-[10px] w-[300px] md:w-[600px] h-[30px] flex justify-between">
         <div
           className={`rounded-[5px]`}
           style={{
