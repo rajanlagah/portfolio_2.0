@@ -116,13 +116,12 @@ const Skills = () => {
         <div className="flex flex-col justify-center gap-12">
           <div className="flex justify-evenly gap-5">
             <img
-              width={"80px"}
-              height={"80px"}
+              className="skill-icon-img"
               src="/public/skills/paint-brush.svg"
             />
             <div>
-              <h2 className="text-2xl text-[#ccc] font-bold"> Design + Development</h2>
-              <p className="mt-3 w-96 tracking-wider text-sm">
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold"> Design + Development</h2>
+              <p className="mt-3 md:w-96 tracking-wider text-sm">
                 Clean, modern 3D web designs - optimized for performance
               </p>
             </div>
@@ -130,13 +129,12 @@ const Skills = () => {
 
           <div className="flex justify-evenly gap-5">
             <img
-              width={"80px"}
-              height={"80px"}
+              className="skill-icon-img"
               src="/public/skills/code.svg"
             />
             <div>
-              <h2 className="text-2xl text-[#ccc] font-bold">Architecture</h2>
-              <p className="mt-3 w-96 tracking-wider text-sm">
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Architecture</h2>
+              <p className="mt-3 md:w-96 tracking-wider text-sm">
                 FullStack Developer with passion of creating and solving system
                 architecture
               </p>
@@ -145,13 +143,12 @@ const Skills = () => {
 
           <div className="flex justify-evenly gap-5">
             <img
-              width={"80px"}
-              height={"80px"}
+              className="skill-icon-img"
               src="/public/skills/jira.svg"
             />
             <div>
-              <h2 className="text-2xl text-[#ccc] font-bold">Management</h2>
-              <p className="mt-3 w-96 tracking-wider text-sm">
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Management</h2>
+              <p className="mt-3 md:w-96 tracking-wider text-sm">
                 Responsibility of delivering final product and keeping team
                 up-to-date{" "}
               </p>
