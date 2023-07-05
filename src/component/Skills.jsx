@@ -7,44 +7,44 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant, containerGrow } from "../utils/motion";
 
-const max_year = 4;
+const max_year = 5;
 
 const services = [
   {
     title: "HTML",
     color: "#f06529",
     badgeColor: "#f06529ae",
-    year: 4
+    year: 5
   },
   {
     title: "CSS",
     color: "#264de4cc",
     badgeColor: "#264de4",
-    year: 4
+    year: 5
   },
   {
     title: "JavaScript",
     color: "#F0DB4Fcc",
     badgeColor: "#F0DB4F",
-    year: 4
+    year: 5
   },
   {
     title: "React",
     color: "#61DBFBcc",
     badgeColor: "#61DBFB",
-    year: 4
+    year: 5
   },
   {
     title: "ExpressJS",
     color: "#68A063cc",
     badgeColor: "#68A063",
-    year: 4
+    year: 5
   },
   {
     title: "Redux",
     color: "#764abccc",
     badgeColor: "#764abc",
-    year: 4
+    year: 5
   },
   {
     title: "Jenkins",
