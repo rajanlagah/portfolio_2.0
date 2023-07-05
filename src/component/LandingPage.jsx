@@ -5,7 +5,7 @@ import { SectionWrapper } from '../hoc';
 
 const LandingPage = () => {
   return (
-    <div className={`h-screen`}>
+    <div className={`${styles.paddingX} h-screen`}>
       <div className="flex justify-center items-start gap-2 w-max">
         <div className="flex flex-col justify-center items-center">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />

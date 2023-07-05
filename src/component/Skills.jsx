@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// import painBrush from '/skills/paint-brush.svg'
+
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant, containerGrow } from "../utils/motion";
@@ -117,7 +119,7 @@ const Skills = () => {
           <div className="flex justify-evenly gap-5">
             <img
               className="skill-icon-img"
-              src="/public/skills/paint-brush.svg"
+              src="./skills/paint-brush.svg"
             />
             <div>
               <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold"> Design + Development</h2>
@@ -130,7 +132,7 @@ const Skills = () => {
           <div className="flex justify-evenly gap-5">
             <img
               className="skill-icon-img"
-              src="/public/skills/code.svg"
+              src="./skills/code.svg"
             />
             <div>
               <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Architecture</h2>
@@ -144,7 +146,7 @@ const Skills = () => {
           <div className="flex justify-evenly gap-5">
             <img
               className="skill-icon-img"
-              src="/public/skills/jira.svg"
+              src="./skills/jira.svg"
             />
             <div>
               <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Management</h2>
