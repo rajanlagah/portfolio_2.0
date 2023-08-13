@@ -16,6 +16,22 @@ export const textVariant = (delay) => {
   };
 };
 
+export const containerGrow = (delay=0) => {
+  return {
+    hidden: {
+      width: 0,
+      overflow:'hidden',
+    },
+    show: {
+      width: "100%",
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        delay: delay,
+      },
+    },
+  };
+};
 export const fadeIn = (direction, type, delay, duration) => {
   return {
     hidden: {
