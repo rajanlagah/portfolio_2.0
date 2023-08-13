@@ -1,0 +1,42 @@
+
+  .img-col img{
+    width: 20vw;
+    height: auto;
+  }
+  .img-col{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2vw;
+    border-radius: 5rem;
+  }
+  .img-container{
+    display: flex;
+    gap: 2vw;
+    flex-direction: row;
+    overflow: hidden;
+    /* background: red; */
+  }
+  
+  .spacer{
+    height: 100vh;
+    display: block;
+    width: 100vw;
+    font-size: 2rem;
+  }
+  
+  .img-col:nth-child(1){
+    margin-top: -20%;
+  }
+  
+  .img-col:nth-child(2){
+    margin-top: -14%;
+  }
+  
+  .img-col:nth-child(3){
+    margin-top: -25%;
+  }
+  
+  .img-col:nth-child(4){
+    margin-top: -2%;
+  }

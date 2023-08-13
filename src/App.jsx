@@ -12,8 +12,17 @@ import StarsCanvas from "./component/canvas/Stars";
 import Github from "./component/Github";
 import Documentation from "./component/Documentation";
 import Skills from "./component/Skills";
+import SmoothImgScroll from "./component/smooth_scroll";
+import Lenis from "@studio-freight/lenis";
+
+// const lenis = new Lenis()
+
+// lenis.on('scroll', (e) => {
+//   // console.log(e)
+// })
 
 function App() {
+  
   return (
     <>
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
@@ -29,6 +38,7 @@ function App() {
           <Works />
           <Github />
           <Documentation />
+          <SmoothImgScroll/>
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />
