@@ -37,7 +37,7 @@ const LandingPage = () => {
           }}
         />
       </div>
-      <div className="flex flex-col items-center gap-4 justify-between md:flex-row mt-24">
+      <div className="flex flex-col items-center gap-4 justify-between md:flex-row mt-4">
         <AnimatedBox duration={2} rotations={1} bg="#4c23a4">
           <Counter from={0} to={230} duration={2} infoText="Leetcode problems solved">
             <img
@@ -59,7 +59,7 @@ const LandingPage = () => {
         </AnimatedBox>
 
         <AnimatedBox duration={3} rotations={1.5}>
-          <Counter from={0} to={13} duration={3.5} infoText="Github stars 🌟">
+          <Counter from={0} to={17} duration={3.5} infoText="Github stars 🌟">
             <img
               src="/githubLogo.png"
               className="drop-shadow-md w-24 md:w-28 "

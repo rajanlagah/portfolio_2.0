@@ -4,7 +4,7 @@ import React from 'react';
 
 const ScrollArrow = () => {
   return (
-    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 text-gray-500 animate-bounce"

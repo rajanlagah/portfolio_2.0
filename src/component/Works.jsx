@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -18,9 +18,9 @@ import wendor_kiosk from "/projects/wendor_kiosk.png";
 const SWYM_PROJECTS = [
   {
     name: "Hydrogen Wishlist",
-    org:{
-      name:"Swym",
-      color:"#8bc34a"
+    org: {
+      name: "Swym",
+      color: "#8bc34a"
     },
     description:
       "Shopify store with Swym wishlist app configured using rest APIs. We also deploy setup docs using codelabs",
@@ -40,11 +40,12 @@ const SWYM_PROJECTS = [
     ],
     image: hydrogen,
     source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
-  },{
+  },
+  {
     name: "Swym dashboard",
-    org:{
-      name:"Swym",
-      color:"#8bc34a"
+    org: {
+      name: "Swym",
+      color: "#8bc34a"
     },
     description:
       "Swym dashboard to check store revenue contribution by swym apps and integrate swym features",
@@ -62,14 +63,14 @@ const SWYM_PROJECTS = [
         color: "pink-text-gradient"
       }
     ],
-    image: swym_dashboard,
-    source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
+    image: swym_dashboard
+    // source_code_link: "https://github.com/swym-corp/swym-hydrogen-store"
   },
   {
     name: "SWOT",
-    org:{
-      name:"Swym",
-      color:"#8bc34a"
+    org: {
+      name: "Swym",
+      color: "#8bc34a"
     },
     description:
       "We trained and build our chatbot that has learned from Swym help articles and can answer questions related to every feature and feature integration that swym support. Reducing inbound traffic to Customer support team and response time.",
@@ -93,9 +94,9 @@ const SWYM_PROJECTS = [
   },
   {
     name: "Swym docs",
-    org:{
-      name:"Swym",
-      color:"#8bc34a"
+    org: {
+      name: "Swym",
+      color: "#8bc34a"
     },
     description:
       "Solution where Swym documentation, API documentation and Changelog is posted.",
@@ -117,9 +118,9 @@ const SWYM_PROJECTS = [
 const WENDOR_PROJECTS = [
   {
     name: "Dashboard",
-    org:{
-      name:"Wendor",
-      color:"#fff"
+    org: {
+      name: "Wendor",
+      color: "#fff"
     },
     description:
       "Dashboard to manage wending machines. Get vending machine status, revenue reporting and feature integrations",
@@ -142,12 +143,11 @@ const WENDOR_PROJECTS = [
   },
   {
     name: "Kiosk",
-    org:{
-      name:"Wendor",
-      color:"#fff"
+    org: {
+      name: "Wendor",
+      color: "#fff"
     },
-    description:
-      "Vending machine's Touch screen app",
+    description: "Vending machine's Touch screen app",
     tags: [
       {
         name: "React",
@@ -168,7 +168,6 @@ const WENDOR_PROJECTS = [
   }
 ];
 
-
 const ProjectCard = ({
   index,
   name,
@@ -178,8 +177,22 @@ const ProjectCard = ({
   org,
   source_code_link
 }) => {
+  const [shakeComp, setShakeComp] = useState(false);
+
+  const handleOnClick = () => {
+    if (!source_code_link) {
+      setShakeComp(true);
+    } else {
+      window.open(source_code_link, "_blank");
+    }
+  };
+
   return (
-    <div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <div
+      className={`cursor-pointer ${shakeComp && "shake"}`}
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      onClick={handleOnClick}
+    >
       <div
         options={{
           max: 45,
@@ -194,29 +207,37 @@ const ProjectCard = ({
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
-          <br/>
+          <br />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="bg-white drop-shadow-lg w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={'/arrow-up-right-from-square.svg'}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+            {source_code_link ? (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="bg-white drop-shadow-lg w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={"/arrow-up-right-from-square.svg"}
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
 
         <div className="mt-5 h-[200px]">
           {org && (
-            <span className={`border-solid pr-2 text-[15px] text-[${org.color}]`}>
-            {org.name}
-          </span>
+            <span
+              className={`border-solid pr-2 text-[15px] text-[${org.color}]`}
+            >
+              {org.name}
+            </span>
           )}
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 tracking-wide text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 tracking-wide text-secondary text-[14px]">
+            {description}
+          </p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -247,11 +268,11 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following publically available projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Following publically available projects showcases my skills and
+          experience through real-world examples of my work. Each project is
+          briefly described with links to code repositories and live demos in
+          it. It reflects my ability to solve complex problems, work with
+          different technologies, and manage projects effectively.
         </p>
       </div>
 

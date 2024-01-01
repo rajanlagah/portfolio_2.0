@@ -37,14 +37,17 @@ const experiences = [
     date: "Jan 2019 - Apr 2021",
     points: [
       "Part of the product design team.",
-      "Designed Nova+ system architecture",
-      "Designed MQTT system architecture for all wending machines",
-      "Implemented MQTT-based architecture resulting in the fastest multiple vending from the vending machine.",
+      `Implemented MQTT based architecture for vending machines,
+      leading to the fastest multiple vendings.`,
+      `Developed React.js and Node.js dashboard for remote monitoring of
+      vending machines, improving operational efficiency.`,
+      `Managed vending machines in AMAZON SAMBHAV (2019) event,
+      showcasing company products at a prominent platform.`,
       "Launched TWA wendor apps and deprecated webview apps",
       "Worked on UNIX boot and setup scripts",
       "Docker and jenkins setup to distribute latest version codes to edge devices",
-      "Managed vending machines in AMAZON SAMBHAV (2019) event.",
-      "Developed gift voucher vending kiosk for DLF malls Diwali celebration event (2019)."
+      `Developed gift voucher vending kiosk for DLF mall’s Diwali
+      celebration event (2019), enhancing brand visibility.`,
     ]
   },
   {
@@ -54,14 +57,18 @@ const experiences = [
     iconBg: "#383E56",
     date: "Apr 2021 - Present",
     points: [
-      "Reduced App size by 20%",
-      "Won swym hackathon 2023 may.",
-      "Won the best project of the month prize.",
-      "Automated API documentation on readme.com.",
-      "Worked on enabling app support for Shopify's hydrogen.",
+      `Spearheaded Wishlist Javascript team, reducing app size by 20%,
+      enhancing user experience and performance score.`,
+      `Winner of Swym Hackathon 2023 (May), showcasing innovation and
+      problem-solving skills.`,
+      `Enabled app support for Shopify's hydrogen, expanding the user
+      base and market reach`,
+      `Created React.js IFrame apps for various 3rd party integrations,
+      reducing single point of failure in infrastructure.`,
       "Worked on clojure backend",
       "Revamp the whole merchant dashboard.",
-      "Created IFrame apps for various 3rd party integrations."
+      `Currently managing building Shopify theme extension apps, and
+      successfully reduced loading time to half.`
     ]
   }
 ];
@@ -100,7 +107,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
+            className="text-white-100 text-[14px] pl-1 tracking-tight"
           >
             {point}
           </li>
