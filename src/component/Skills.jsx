@@ -11,15 +11,9 @@ const max_year = 5;
 
 const services = [
   {
-    title: "HTML",
+    title: "HTML/CSS",
     color: "#f06529",
     badgeColor: "#f06529ae",
-    year: 5
-  },
-  {
-    title: "CSS",
-    color: "#264de4cc",
-    badgeColor: "#264de4",
     year: 5
   },
   {
@@ -45,6 +39,12 @@ const services = [
     color: "#764abccc",
     badgeColor: "#764abc",
     year: 5
+  },
+  {
+    title: "NextJS",
+    color: "#264de4cc",
+    badgeColor: "#264de4",
+    year: 3
   },
   {
     title: "Jenkins",
@@ -79,7 +79,10 @@ const services = [
 ];
 
 const SkillBar = ({ index, title, color, year, badgeColor }) => (
-  <motion.div variants={containerGrow(index*0.5)} className="mt-2 xs:w-[250px] w-full">
+  <motion.div
+    variants={containerGrow(index * 0.5)}
+    className="mt-2 xs:w-[250px] w-full"
+  >
     <div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -117,12 +120,12 @@ const Skills = () => {
       <div className="flex min-h-[60vh] justify-start gap-12 items-center flex-wrap">
         <div className="flex flex-col justify-center gap-12">
           <div className="flex justify-evenly gap-5">
-            <img
-              className="skill-icon-img"
-              src="./skills/paint-brush.svg"
-            />
+            <img className="skill-icon-img" src="./skills/paint-brush.svg" />
             <div>
-              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold"> Design + Development</h2>
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">
+                {" "}
+                Design + Development
+              </h2>
               <p className="mt-3 md:w-96 tracking-wider text-sm">
                 Clean, modern 3D web designs - optimized for performance
               </p>
@@ -130,12 +133,11 @@ const Skills = () => {
           </div>
 
           <div className="flex justify-evenly gap-5">
-            <img
-              className="skill-icon-img"
-              src="./skills/code.svg"
-            />
+            <img className="skill-icon-img" src="./skills/code.svg" />
             <div>
-              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Architecture</h2>
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">
+                Architecture
+              </h2>
               <p className="mt-3 md:w-96 tracking-wider text-sm">
                 FullStack Developer with passion of creating and solving system
                 architecture
@@ -144,12 +146,11 @@ const Skills = () => {
           </div>
 
           <div className="flex justify-evenly gap-5">
-            <img
-              className="skill-icon-img"
-              src="./skills/jira.svg"
-            />
+            <img className="skill-icon-img" src="./skills/jira.svg" />
             <div>
-              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">Management</h2>
+              <h2 className="sm:text-xl md:text-2xl text-[#ccc] font-bold">
+                Management
+              </h2>
               <p className="mt-3 md:w-96 tracking-wider text-sm">
                 Responsibility of delivering final product and keeping team
                 up-to-date{" "}
